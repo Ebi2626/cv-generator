@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head />
+<body>
+<div class="main__box" th:fragment="education">
+    <h2 class="education__title">
+        Education <i class="fa fa-graduation-cap"></i>
+    </h2>
+    <div class="education__content" th:each="education : ${educations}">
+        <p class="education__itemTitle" th:text="${education.fieldOfStudy + ' ' + education.degree + ' ' + education.from + ' - ' + education.to}">
+            Information Technology Engineer 2019 - 2023
+        </p>
+        <p class="education__paragraph">
+            <span class="white">Univeristy: </span>
+            <a th:href="${education.universityUrl}" th:text="${education.university}" target="_blank"
+            >Collage of Management and Banking</a
+            >
+            <span th:text="${education.location}">
+            in Kraków
+            </span>
+        </p>
+        <p class="education__paragraph">
+            <span class="white">Field of study:</span>
+            <span th:text="${education.fieldOfStudy}">
+                Information Technology
+            </span>
+        </p>
+        <p class="education__paragraph">
+            <span class="white">Specialization:</span>
+            <span th:text="${education.specialization}">
+            </span>
+        </p>
+        <p class="education__paragraph">
+            <span class="white">Degree:</span>
+            <span th:text="${education.degree}"></span>
+        </p>
+        <p class="education__paragraph" th:text="${education.description}">
+            The specialization in Object-Oriented Programming is designed to equip students with practical skills necessary for a successful entry into the job market as a software developer. Primarily focused on Java, this specialization also offers opportunities to learn other programming languages such as C, C#, JavaScript, and technologies associated with software development, including MySql.
+        </p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head />
+<body>
+<div th:fragment="contact" class="sidebar__contact">
+    <ul class="sidebar__list">
+        <li class="contact__item">
+            <a
+                href="tel:+4879032905"
+            ><i class="fa fa-phone"></i>
+            <span th:text="${person.phone}">
+                +48 790 323 905
+            </span>
+            </a>
+        </li>
+        <li class="contact__item">
+            <a href="mailto:edwin.harmata@gmail.com">
+                <i class="fa fa-envelope"></i>
+                <span th:text="${person.email}">
+                    edwin.harmata@gmail.com
+                </span>
+            </a>
+        </li>
+        <li class="contact__item">
+            <a href="https://linkedin.com/in/edwin-harmata">
+                <i class="fab fa-linkedin"></i>
+                <span th:text="${person.linkedin}">
+                    linkedin.com/in/edwin-harmata
+                </span>
+            </a>
+        </li>
+        <li class="contact__item">
+            <a href="https://github.com/ebi2626">
+                <i class="fab fa-github"></i>
+                <span th:text="${person.github}">
+                    github.com/ebi2626
+                </span>
+            </a>
+        </li>
+        <li class="contact__item">
+            <a href="https://edwinharmata.pl">
+                <i class="fas fa-link"></i>
+                <span th:text="${person.website}">
+                    edwinharmata.pl
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head />
+<body>
+<div th:fragment="hobby" class="hobby">
+    <h2 class="hobby__title">
+        Hobbies <i class="fa fa-power-off"></i>
+    </h2>
+    <ul class="hobby__content">
+        <li th:each="hobby : ${hobbies}" class="hobby__item" th:text="${hobby.name}">Coding</li>
+    </ul>
+</div>
+
+</body>
+</html>

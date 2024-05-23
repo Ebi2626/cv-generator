@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head />
+<body>
+<div th:fragment="technology" class="technology">
+    <h2 class="technology__title">
+        Technologies <i class="fa fa-cogs"></i>
+    </h2>
+    <div class="technology__content">
+        <i class="fa fa-cog technology__content--icon"></i>
+
+        <div th:each="technology : ${technologies}" class="technology__item">
+            <p class="technology__text" th:text="${technology.name}">Angular</p>
+            <div th:class="'line' +  ${technology.value < 1 ? ' line--white' : ''}"></div>
+            <div th:class="'line' +  ${technology.value < 2 ? ' line--white' : ''}"></div>
+            <div th:class="'line' +  ${technology.value < 3 ? ' line--white' : ''}"></div>
+            <div th:class="'line' +  ${technology.value < 4 ? ' line--white' : ''}"></div>
+            <div th:class="'line' +  ${technology.value < 5 ? ' line--white' : ''}"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

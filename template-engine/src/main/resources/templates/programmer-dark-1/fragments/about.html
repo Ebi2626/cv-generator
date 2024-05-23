@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head />
+<body>
+<div th:fragment="about" class="about">
+    <h2 class="about__title">Profile <i class="fa fa-user"></i></h2>
+    <p th:text="${profile.description}" class="about__content">
+        Some person description
+    </p>
+</div>
+</body>
+</html>

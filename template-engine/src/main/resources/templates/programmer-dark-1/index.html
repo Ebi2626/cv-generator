@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/shared/head.html :: head}">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<main class="main">
+    <div class="sidebar">
+        <div class="sidebar__photo">
+            <img
+                    alt="edwin_harmata"
+                    class="sidebar__img"
+            />
+        </div>
+        <h2 class="about__name">Edwin Harmata</h2>
+        <div th:replace="~{${fileName + '/fragments/contact.html'} :: contact}" />
+        <div th:replace="~{${fileName + '/fragments/about.html'} :: about}" class="about" />
+        <div th:replace="~{${fileName + '/fragments/technology.html'} :: technology}" class="about" />
+        <div th:replace="~{${fileName + '/fragments/hobby.html'} :: hobby}" class="about" />
+    </div>
+    <div class="main__center">
+        <div class="main__bgImage">
+            <i class="fas fa-laptop"></i>
+        </div>
+        <div th:replace="~{${fileName + '/fragments/experience.html'} :: experience}" />
+        <hr />
+        <div th:replace="~{${fileName + '/fragments/education.html'} :: education}" />
+
+        <hr />
+        <footer th:replace="~{${fileName + '/fragments/footer.html'} :: footer}" class="footer">
+            <p class="footer__paragraph">
+                Some footer text
+            </p>
+        </footer>
+    </div>
+    </div>
+</main>
+
+</body>
+</html>

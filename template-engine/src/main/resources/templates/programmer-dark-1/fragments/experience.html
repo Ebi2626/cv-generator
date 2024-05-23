@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head />
+<body>
+<div th:fragment="experience" class="main__box">
+    <h2 class="experience__title">
+        Work Experience <i class="fa fa-arrow-up"></i>
+    </h2>
+    <ul class="experience__content">
+        <li class="experience__item" th:each="experience : ${workExperiences}">
+            <h4 class="expreience__itemTitle" th:text="${experience.position}">Front-End Developer</h4>
+            <p class="experience__describe white">
+                <span th:text="${experience.from}">
+                02.2022
+                </span>
+                -
+                <span th:text="${experience.to}">
+                current
+                </span>
+                -
+                <span th:text="${experience.position}">
+                Front-End Developer
+                </span>
+                in
+                <a th:href="${experience.companyUrl}" th:text="${experience.company}"
+                >Onwelo</a
+                >
+                in
+                <span th:text="${experience.companyLocation}">
+                    Kraków
+                </span>
+            </p>
+            <p class="experience__describe" th:text="${experience.description}">
+            </p>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
